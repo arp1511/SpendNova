@@ -1,0 +1,88 @@
+
+> marketing-mojito-expense-tracker@1.0.0 start
+> react-scripts start
+
+Attempting to bind to HOST environment variable: 127.0.0.1
+If this was unintentional, check that you haven't mistakenly set it in your shell.
+Learn more here: https://cra.link/advanced-config
+
+Starting the development server...
+
+Compiled successfully!
+
+You can now view marketing-mojito-expense-tracker in the browser.
+
+  http://127.0.0.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './components/AuthPanel.jsx' in 'C:\Users\Arpita\Downloads\FairShare-fixed\marketing-mojito-expense-tracker\src'
+[1m[31mERROR[39m[22m in [1m./src/App.jsx[39m[22m [1m[32m6:0-51[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './components/AuthPanel.jsx' in 'C:\Users\Arpita\Downloads\FairShare-fixed\marketing-mojito-expense-tracker\src'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/App.jsx[39m[22m [1m[32m12:0-53[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './components/FiltersBar.jsx' in 'C:\Users\Arpita\Downloads\FairShare-fixed\marketing-mojito-expense-tracker\src'[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './components/FiltersBar.jsx' in 'C:\Users\Arpita\Downloads\FairShare-fixed\marketing-mojito-expense-tracker\src'
+[1m[31mERROR[39m[22m in [1m./src/App.jsx[39m[22m [1m[32m12:0-53[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './components/FiltersBar.jsx' in 'C:\Users\Arpita\Downloads\FairShare-fixed\marketing-mojito-expense-tracker\src'[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Failed to compile.
+
+Module not found: Error: Can't resolve './styles.css' in 'C:\Users\Arpita\Downloads\FairShare-fixed\marketing-mojito-expense-tracker\src'
+[1m[31mERROR[39m[22m in [1m./src/index.js[39m[22m [1m[32m7:0-22[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './styles.css' in 'C:\Users\Arpita\Downloads\FairShare-fixed\marketing-mojito-expense-tracker\src'[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m

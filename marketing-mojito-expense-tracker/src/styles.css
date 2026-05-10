@@ -1,0 +1,551 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-slate-100 text-slate-900 antialiased dark:bg-slate-800 dark:text-slate-100;
+  }
+
+  body {
+    @apply m-0 min-w-80 bg-slate-100 font-sans transition-colors duration-300 dark:bg-slate-800;
+  }
+
+  #root {
+    @apply min-h-screen bg-slate-100 transition-colors duration-300 dark:bg-slate-800;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  label {
+    @apply mb-4 grid gap-2 text-sm font-bold text-slate-600 dark:text-slate-300;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-3 text-slate-900 outline-none transition focus:border-teal-700 focus:ring-4 focus:ring-teal-700/10 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100;
+  }
+
+  textarea {
+    @apply min-h-24 resize-y;
+  }
+}
+
+@layer components {
+  .landing-shell {
+    @apply mx-auto min-h-screen w-[min(1180px,calc(100%_-_32px))] bg-slate-100 py-6 transition-colors duration-300 dark:bg-slate-800 sm:py-8;
+  }
+
+  .site-nav {
+    @apply mb-10 flex items-center justify-between gap-4 rounded-lg border border-slate-200 bg-white/80 px-4 py-3 shadow-panel backdrop-blur dark:border-slate-800 dark:bg-slate-900/85;
+  }
+
+  .site-nav > div:last-child {
+    @apply flex flex-wrap items-center justify-end gap-2;
+  }
+
+  .site-nav button {
+    @apply rounded-lg border border-slate-300 bg-white px-3 py-2 font-extrabold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-800;
+  }
+
+  .brand-mark,
+  .brand-button {
+    @apply text-lg font-black text-slate-950 dark:text-white;
+  }
+
+  .brand-button {
+    @apply border-0 bg-transparent px-0 py-0 hover:bg-transparent dark:bg-transparent dark:hover:bg-transparent;
+  }
+
+  .dashboard-nav {
+    @apply mb-6;
+  }
+
+  .floating-nav {
+    @apply fixed left-6 right-6 top-6 z-10 mx-auto max-w-5xl;
+  }
+
+  .auth-nav {
+    @apply mb-5 flex w-full max-w-xl items-center justify-between rounded-lg border border-slate-200 bg-white px-4 py-3 shadow-panel dark:border-slate-800 dark:bg-slate-900;
+  }
+
+  .auth-nav button {
+    @apply rounded-lg border border-slate-300 bg-white px-3 py-2 font-extrabold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-800;
+  }
+
+  .auth-nav .brand-button {
+    @apply border-0 bg-transparent px-0 py-0 text-lg hover:bg-transparent dark:bg-transparent dark:hover:bg-transparent;
+  }
+
+  .landing-hero {
+    @apply grid py-12 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_460px];
+  }
+
+  .landing-hero h1 {
+    @apply m-0 max-w-3xl text-4xl font-black leading-none text-slate-950 dark:text-white sm:text-6xl lg:text-7xl;
+  }
+
+  .landing-actions {
+    @apply mt-6 flex flex-col gap-3 sm:flex-row sm:items-center;
+  }
+
+  .landing-actions .primary-action {
+    @apply sm:w-auto;
+  }
+
+  .landing-actions a {
+    @apply rounded-lg border border-slate-300 bg-white px-4 py-3 text-center font-extrabold text-slate-700 no-underline transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800;
+  }
+
+  .hero-visual {
+    @apply grid gap-4 rounded-lg border border-slate-200 bg-white p-4 shadow-auth dark:border-slate-800 dark:bg-slate-900;
+  }
+
+  .visual-grid {
+    @apply grid grid-cols-2 gap-4;
+  }
+
+  .visual-card {
+    @apply rounded-lg border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-950;
+  }
+
+  .visual-card span {
+    @apply text-sm font-bold text-slate-500 dark:text-slate-400;
+  }
+
+  .visual-card strong {
+    @apply mt-2 block text-3xl font-black text-slate-950 dark:text-white;
+  }
+
+  .visual-card p {
+    @apply mb-0 mt-2 text-slate-500 dark:text-slate-400;
+  }
+
+  .total-preview {
+    @apply bg-slate-900 text-white dark:bg-teal-700;
+  }
+
+  .total-preview span,
+  .total-preview p {
+    @apply text-slate-300;
+  }
+
+  .total-preview strong {
+    @apply text-white;
+  }
+
+  .wide-card {
+    @apply col-span-2 bg-teal-50 dark:bg-teal-950/40;
+  }
+
+  .feature-band {
+    @apply grid gap-4 border-t border-slate-200 py-8 dark:border-slate-800 md:grid-cols-3;
+  }
+
+  .feature-band article {
+    @apply rounded-lg border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900;
+  }
+
+  .feature-band article span {
+    @apply text-sm font-black text-teal-700 dark:text-teal-300;
+  }
+
+  .feature-band h2 {
+    @apply mb-2 mt-3 text-xl font-black text-slate-950 dark:text-white;
+  }
+
+  .feature-band p {
+    @apply m-0 leading-7 text-slate-500 dark:text-slate-400;
+  }
+
+  .about-hero {
+    @apply mx-auto max-w-3xl py-16;
+  }
+
+  .about-hero h1 {
+    @apply m-0 text-4xl font-black leading-tight text-slate-950 dark:text-white sm:text-6xl;
+  }
+
+  .about-hero p {
+    @apply mt-5 text-lg leading-8 text-slate-500 dark:text-slate-300;
+  }
+
+  .about-grid {
+    @apply grid gap-5 md:grid-cols-2;
+  }
+
+  .about-grid p {
+    @apply leading-7 text-slate-500 dark:text-slate-300;
+  }
+
+  .site-footer {
+    @apply mt-12 flex flex-col gap-5 rounded-lg border border-teal-200 bg-teal-50 px-5 py-6 text-sm text-teal-800 dark:border-teal-900 dark:bg-teal-950/40 dark:text-teal-100 lg:flex-row lg:items-start lg:justify-between;
+  }
+
+  .footer-brand {
+    @apply grid gap-1;
+  }
+
+  .footer-brand strong {
+    @apply text-base font-black text-teal-950 dark:text-white;
+  }
+
+  .footer-brand span {
+    @apply leading-6;
+  }
+
+  .footer-brand small {
+    @apply mt-1 text-xs font-semibold text-teal-700/70 dark:text-teal-200/70;
+  }
+
+  .footer-links {
+    @apply flex flex-wrap gap-x-4 gap-y-2 lg:justify-end;
+  }
+
+  .footer-links a {
+    @apply font-bold text-teal-800 no-underline transition hover:text-teal-950 dark:text-teal-100 dark:hover:text-white;
+  }
+
+  .auth-shell {
+    @apply flex min-h-screen flex-col items-center justify-center bg-slate-100 p-6 transition-colors duration-300 dark:bg-slate-800;
+  }
+
+  .auth-panel {
+    @apply w-full max-w-xl rounded-lg border border-slate-200 bg-white p-6 shadow-auth dark:border-slate-700 dark:bg-slate-900 sm:p-8;
+  }
+
+  .auth-panel h1 {
+    @apply m-0 text-4xl font-extrabold leading-none text-slate-950 dark:text-white sm:text-5xl;
+  }
+
+  .auth-form {
+    @apply mt-6;
+  }
+
+  .password-field {
+    @apply grid gap-2 sm:grid-cols-[minmax(0,1fr)_auto];
+  }
+
+  .password-field button,
+  .ghost-action,
+  .neutral-action {
+    @apply rounded-lg border border-slate-300 bg-white px-3 py-2 font-extrabold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-800;
+  }
+
+  .check-row {
+    @apply mb-3 flex items-center gap-3 font-semibold;
+  }
+
+  .check-row input {
+    @apply h-5 w-5;
+  }
+
+  .app-shell {
+    @apply mx-auto min-h-screen w-[min(1180px,calc(100%_-_32px))] bg-slate-100 py-6 transition-colors duration-300 dark:bg-slate-800 sm:py-10;
+  }
+
+  .hero {
+    @apply mb-6 grid items-stretch gap-6 lg:grid-cols-[minmax(0,1fr)_360px];
+  }
+
+  .hero h1 {
+    @apply m-0 max-w-3xl text-3xl font-extrabold leading-tight text-slate-950 dark:text-white sm:text-5xl lg:text-6xl;
+  }
+
+  .hero-copy {
+    @apply mt-5 max-w-2xl text-base leading-7 text-slate-500 dark:text-slate-400 sm:text-lg;
+  }
+
+  .profile-actions {
+    @apply mt-5 flex flex-col items-stretch gap-2 text-slate-500 sm:flex-row sm:flex-wrap sm:items-center;
+  }
+
+  .profile-actions button {
+    @apply rounded-lg border border-slate-300 bg-white px-3 py-2 font-extrabold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-800;
+  }
+
+  .profile-shell {
+    @apply max-w-5xl;
+  }
+
+  .profile-hero {
+    @apply mb-6 grid gap-5 lg:grid-cols-[minmax(0,1fr)_360px];
+  }
+
+  .profile-hero h1 {
+    @apply m-0 max-w-3xl text-4xl font-extrabold leading-tight text-slate-950 dark:text-white sm:text-5xl;
+  }
+
+  .profile-stats {
+    @apply grid gap-3 rounded-lg border border-slate-200 bg-white p-5 shadow-panel dark:border-slate-800 dark:bg-slate-900;
+  }
+
+  .profile-stats div {
+    @apply rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-950;
+  }
+
+  .profile-stats span {
+    @apply block text-sm font-bold text-slate-500 dark:text-slate-300;
+  }
+
+  .profile-stats strong {
+    @apply mt-2 block text-2xl font-black text-slate-950 dark:text-white;
+  }
+
+  .profile-grid {
+    @apply grid gap-5 lg:grid-cols-2;
+  }
+
+  .danger-panel {
+    @apply lg:col-span-2;
+  }
+
+  .danger-panel p {
+    @apply mt-0 max-w-3xl leading-7 text-slate-500 dark:text-slate-300;
+  }
+
+  .account-actions {
+    @apply flex flex-col gap-3 sm:flex-row;
+  }
+
+  .eyebrow {
+    @apply mb-2 mt-0 text-xs font-extrabold uppercase tracking-normal text-teal-700;
+  }
+
+  .summary-card,
+  .panel {
+    @apply rounded-lg border border-slate-200 bg-white shadow-panel dark:border-slate-800 dark:bg-slate-900;
+  }
+
+  .summary-card {
+    @apply flex min-h-48 flex-col justify-between bg-slate-900 p-5 text-white sm:min-h-60 sm:p-7;
+  }
+
+  .summary-card span,
+  .summary-card p {
+    @apply m-0 text-slate-300;
+  }
+
+  .summary-card strong {
+    @apply block text-4xl font-extrabold leading-none sm:text-5xl;
+  }
+
+  .budget-meter {
+    @apply grid gap-2;
+  }
+
+  .budget-meter div:first-child {
+    @apply flex justify-between gap-3;
+  }
+
+  .budget-meter b {
+    @apply text-white;
+  }
+
+  .budget-track {
+    @apply h-2.5 overflow-hidden rounded-full bg-white/20;
+  }
+
+  .budget-track span {
+    @apply block h-full rounded-full bg-amber-300;
+  }
+
+  .budget-track .over-budget {
+    @apply bg-rose-400;
+  }
+
+  .workspace {
+    @apply grid items-start gap-5 lg:grid-cols-[340px_minmax(0,1fr)];
+  }
+
+  .panel {
+    @apply p-5 sm:p-6;
+  }
+
+  .panel-heading {
+    @apply mb-5 flex items-start justify-between gap-3;
+  }
+
+  .compact-heading {
+    @apply items-center;
+  }
+
+  .panel-heading h2 {
+    @apply m-0 text-xl font-extrabold leading-tight text-slate-900 dark:text-white;
+  }
+
+  .expense-form {
+    @apply lg:sticky lg:top-5;
+  }
+
+  .primary-action {
+    @apply w-full rounded-lg border-0 bg-teal-700 px-4 py-3 font-extrabold text-white transition hover:bg-teal-800;
+  }
+
+  .form-actions {
+    @apply grid gap-2;
+  }
+
+  .form-error,
+  .api-error {
+    @apply mb-4 mt-0 rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700 dark:bg-red-950/40 dark:text-red-200;
+  }
+
+  .demo-note {
+    @apply mt-4 rounded-lg border border-teal-200 bg-teal-50 px-4 py-3 text-sm font-semibold text-teal-800 dark:border-teal-900 dark:bg-teal-950/40 dark:text-teal-100;
+  }
+
+  .soft-error {
+    @apply border border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-900 dark:bg-amber-950/40 dark:text-amber-100;
+  }
+
+  .insights {
+    @apply grid gap-5 md:grid-cols-2;
+  }
+
+  .dashboard-main {
+    @apply grid gap-5;
+  }
+
+  .expense-list {
+    @apply w-full;
+  }
+
+  .expense-list-area {
+    @apply grid gap-4;
+  }
+
+  .filter-grid {
+    @apply grid gap-3 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .filters-panel label {
+    @apply m-0;
+  }
+
+  .toast,
+  .undo-banner {
+    @apply rounded-lg border border-teal-200 bg-teal-50 px-4 py-3 font-bold text-teal-700;
+  }
+
+  .undo-banner {
+    @apply mb-4 flex items-center justify-between gap-3;
+  }
+
+  .undo-banner button {
+    @apply rounded-lg border-0 bg-teal-700 px-3 py-2 font-extrabold text-white transition hover:bg-teal-800;
+  }
+
+  .converted-total {
+    @apply grid gap-2 rounded-lg bg-teal-50 p-4 dark:bg-teal-950/40;
+  }
+
+  .converted-total span,
+  .rate-note,
+  .muted,
+  .empty-state p,
+  .expense-item p {
+    @apply text-slate-500 dark:text-slate-300;
+  }
+
+  .converted-total strong {
+    @apply text-3xl font-extrabold leading-tight text-teal-700 dark:text-teal-300;
+  }
+
+  .rate-note {
+    @apply mt-3 text-sm;
+  }
+
+  .breakdown-list {
+    @apply grid gap-4;
+  }
+
+  .breakdown-label {
+    @apply mb-2 flex justify-between gap-3 text-slate-700 dark:text-slate-200;
+  }
+
+  .breakdown-label span {
+    @apply flex flex-wrap items-center gap-2;
+  }
+
+  .breakdown-label b {
+    @apply rounded-full bg-amber-100 px-2 py-1 text-xs text-amber-800;
+  }
+
+  .progress-track {
+    @apply h-2.5 overflow-hidden rounded-full bg-slate-100;
+  }
+
+  .progress-track span {
+    @apply block h-full rounded-full bg-amber-500;
+  }
+
+  .expense-items {
+    @apply grid gap-3;
+  }
+
+  .expense-item {
+    @apply flex flex-col gap-4 rounded-lg border border-slate-200 p-4 dark:border-slate-800 sm:flex-row sm:items-center sm:justify-between;
+  }
+
+  .expense-item h3 {
+    @apply mb-1 mt-0 text-base font-extrabold text-slate-900 dark:text-white;
+  }
+
+  .expense-item p {
+    @apply m-0 text-sm;
+  }
+
+  .expense-notes {
+    @apply mt-2 max-w-2xl;
+  }
+
+  .expense-actions {
+    @apply flex flex-col items-stretch gap-2 text-left sm:flex-row sm:items-center sm:text-right;
+  }
+
+  .danger-action {
+    @apply rounded-lg border border-red-200 bg-red-50 px-3 py-2 font-extrabold text-red-700 transition hover:bg-red-100;
+  }
+
+  .empty-state {
+    @apply rounded-lg border border-dashed border-slate-300 p-7 text-center;
+  }
+
+  .empty-state h3 {
+    @apply mb-2 mt-0 text-lg font-extrabold text-slate-900;
+  }
+
+  .empty-state p {
+    @apply m-0;
+  }
+
+  @media (max-width: 520px) {
+    .site-nav {
+      @apply items-start;
+    }
+
+    .dashboard-nav {
+      @apply flex-row items-center;
+    }
+
+    .dashboard-nav > div:last-child {
+      @apply flex-nowrap;
+    }
+
+  .dashboard-nav button {
+    @apply px-2.5 py-2 text-sm;
+  }
+
+  .icon-nav-button {
+    @apply text-xl leading-none sm:text-2xl;
+  }
+
+    .landing-hero {
+      @apply min-h-0;
+    }
+  }
+}
